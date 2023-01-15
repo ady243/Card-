@@ -60,14 +60,15 @@
 
 .card h2 {
   padding: 15px 10px;
-  font-size: 25px;
+  font-size: 30px;
   transition: all 0.1s;
   z-index: -99;
   line-height: 17px;
+  margin-top: 20px;
 }
 
 .card span {
-  font-size: 18px;
+  font-size: 40px;
 }
 
 .card:hover h2 {
@@ -138,10 +139,11 @@ h1 {
 @media (max-width: 600px) {
   .card {
     flex-direction: column;
-    height: 40%;
+    height: 60%;
     width: 80%;
     margin-left: 10%;
-    margin-top: 40%;
+    margin-top: 20%;
+    object-fit: contain;
   }
   .card:hover > p {
     position: relative;
@@ -154,8 +156,29 @@ h1 {
     transition: all 0.1s;
     cursor: pointer;
   }
+  .card:hover .img {
+    background-image: url(https://zupimages.net/up/23/02/xbew.jpg);
+    display: no-repeat;
+  }
+  .img {
+    height: 100%;
+  }
+  .img:hover {
+    height: 100px;
+    width: 500px;
+  }
   h1 {
     margin-top: 10%;
+  }
+  .card h2 {
+    padding: 15px 10px;
+    font-size: 30px;
+    transition: all 0.1s;
+    z-index: -99;
+    line-height: 17px;
+    margin-top: 250px;
+    justify-content: space-between;
+    height: 10%;
   }
 }
 
