@@ -2,7 +2,7 @@
   width: 190px;
   height: 254px;
   margin-top: 10%;
-  margin-left: 42%;
+  margin-left: 38%;
   display: block;
   position: absolute;
   text-align: center;
@@ -134,13 +134,17 @@
   background: linear-gradient(145deg, #f0f0f0, #cacaca);
   box-shadow: 3px 3px 5px #afafaf, -3px -3px 5px #ffffff;
 }
+h1 {
+  text-align: center;
+  margin-top: 10px;
+}
 
 @media (max-width: 600px) {
   .card {
     flex-direction: column;
     height: 40%;
     width: 80%;
-    margin-left: 6%;
+    margin-left: 10%;
     margin-top: 40%;
   }
   .card:hover > p {
@@ -153,6 +157,9 @@
     opacity: 1;
     transition: all 0.1s;
     cursor: pointer;
+  }
+  h1 {
+    margin-top: 10%;
   }
 }
 
