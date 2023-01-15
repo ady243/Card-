@@ -1,32 +1,14 @@
 .card {
-  width: 190px;
+  width: 250px;
   height: 254px;
   margin-top: 10%;
-  margin-left: 38%;
+  margin-left: 42%;
   display: block;
   position: absolute;
   text-align: center;
   background: #f0f0f0;
   border-radius: 10px;
   transition: all 0.5s;
-  background-color: linear-gradient(
-    360deg,
-    rgb(234, 133, 110),
-    rgb(255, 17, 17)
-  );
-  background-size: 400% 400%;
-  animation: anim 2.5s infinite ease-in-out;
-}
-@keyframes anim {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
 }
 
 .card:hover {
@@ -111,8 +93,8 @@
   position: relative;
   bottom: 5px;
   left: 3px;
-  width: 140px;
-  margin-left: 20px;
+  width: 150px;
+  margin-left: 45px;
   margin-top: 15%;
   opacity: 1;
   transition: all 0.1s;
@@ -137,6 +119,20 @@
 h1 {
   text-align: center;
   margin-top: 10px;
+  color: linear-gradient(360deg, rgb(234, 133, 110), rgb(255, 17, 17));
+  background-size: 400% 400%;
+  animation: anim 2.5s infinite ease-in-out;
+}
+@keyframes anim {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
 
 @media (max-width: 600px) {
