@@ -1,38 +1,162 @@
-.App {
+.card {
+  width: 190px;
+  height: 254px;
+  margin-top: 10%;
+  margin-left: 42%;
+  display: block;
+  position: absolute;
+  text-align: center;
+  background: #f0f0f0;
+  border-radius: 10px;
+  transition: all 0.5s;
+  background-color: linear-gradient(
+    360deg,
+    rgb(234, 133, 110),
+    rgb(255, 17, 17)
+  );
+  background-size: 400% 400%;
+  animation: anim 2.5s infinite ease-in-out;
+}
+@keyframes anim {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+.card:hover {
+  /* box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);*/
+
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f90202, #ff3e03);
+  box-shadow: 20px 20px 34px hsl(40, 93%, 50%), -20px -20px 34px #ffffff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card .blob {
+  height: 10px;
+  width: 100%;
+  border-radius: 0 0 30px 30px;
+  margin: 0 auto;
+  background-color: hwb(355 2% 0%);
+  visibility: visible;
+  transition: all 0.3s;
+  animation: anim 2.5s infinite ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card:hover .blob {
+  height: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card .img {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 30px auto 10px auto;
+  width: 70px;
+  height: 70px;
+  background-color: hsl(0, 100%, 50%);
+  background-image: url("https://zupimages.net/up/23/02/cxig.jpg");
+  border-radius: 50%;
+  font-size: 11px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  transition: all 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
+.card:hover .img {
+  width: 100%;
+  height: 74%;
+  border-radius: 10px 0 0;
+  margin: 0 auto;
+  background-image: url(https://zupimages.net/up/23/02/xbew.jpg);
+  z-index: 99999;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card h2 {
+  padding: 15px 10px;
+  font-size: 25px;
+  transition: all 0.1s;
+  z-index: -99;
+  line-height: 17px;
+}
+
+.card span {
+  font-size: 18px;
+}
+
+.card:hover h2 {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.card > p {
+  opacity: 0;
+  transition: all 0.75s;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-between;
+}
+
+.card > p > svg {
+  padding: 5px;
+}
+
+.card:hover > p {
+  position: relative;
+  bottom: 5px;
+  left: 3px;
+  width: 140px;
+  margin-left: 20px;
+  margin-top: 15%;
+  opacity: 1;
+  transition: all 0.1s;
+  cursor: pointer;
+}
+
+.metier {
+  width: 5px;
+  opacity: 0.33;
+}
+.logo {
+  height: 10%;
+  justify-content: space-between;
+  display: flex;
+}
+
+.logo:hover {
+  border-radius: 50px;
+  background: linear-gradient(145deg, #f0f0f0, #cacaca);
+  box-shadow: 3px 3px 5px #afafaf, -3px -3px 5px #ffffff;
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    height: 40%;
+    width: 80%;
+    margin-left: 6%;
+    margin-top: 40%;
   }
-  to {
-    transform: rotate(360deg);
+  .card:hover > p {
+    position: relative;
+    bottom: 5px;
+    left: 3px;
+    width: 250px;
+    margin-left: 20px;
+    margin-top: 15%;
+    opacity: 1;
+    transition: all 0.1s;
+    cursor: pointer;
   }
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
 }
