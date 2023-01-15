@@ -31,10 +31,9 @@
 
 .card:hover {
   /* box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);*/
-
   border-radius: 50px;
-  background: linear-gradient(145deg, #f90202, #ff3e03);
-  box-shadow: 20px 20px 34px hsl(40, 93%, 50%), -20px -20px 34px #ffffff;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
   text-align: center;
 }
 
