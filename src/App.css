@@ -1,14 +1,32 @@
 .card {
-  width: 250px;
+  width: 190px;
   height: 254px;
   margin-top: 10%;
-  margin-left: 42%;
+  margin-left: 44%;
   display: block;
   position: absolute;
   text-align: center;
   background: #f0f0f0;
   border-radius: 10px;
   transition: all 0.5s;
+  background-color: linear-gradient(
+    360deg,
+    rgb(234, 133, 110),
+    rgb(255, 17, 17)
+  );
+  background-size: 400% 400%;
+  animation: anim 2.5s infinite ease-in-out;
+}
+@keyframes anim {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
 }
 
 .card:hover {
@@ -60,15 +78,14 @@
 
 .card h2 {
   padding: 15px 10px;
-  font-size: 30px;
+  font-size: 25px;
   transition: all 0.1s;
   z-index: -99;
   line-height: 17px;
-  margin-top: 20px;
 }
 
 .card span {
-  font-size: 40px;
+  font-size: 18px;
 }
 
 .card:hover h2 {
@@ -94,8 +111,8 @@
   position: relative;
   bottom: 5px;
   left: 3px;
-  width: 150px;
-  margin-left: 45px;
+  width: 140px;
+  margin-left: 20px;
   margin-top: 15%;
   opacity: 1;
   transition: all 0.1s;
@@ -119,66 +136,22 @@
 }
 h1 {
   text-align: center;
-  margin-top: 10px;
-  color: linear-gradient(360deg, rgb(234, 133, 110), rgb(255, 17, 17));
-  background-size: 400% 400%;
-  animation: anim 2.5s infinite ease-in-out;
 }
-@keyframes anim {
-  0% {
-    background-position: 0 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0 50%;
-  }
+h4 {
+  margin-top: -0.2%;
 }
 
 @media (max-width: 600px) {
   .card {
     flex-direction: column;
-    height: 60%;
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 20%;
-    object-fit: contain;
+    justify-content: center;
+    margin-left: 101px;
+    margin-top: 180px;
+    height: 30%;
   }
-  .card:hover > p {
-    position: relative;
-    bottom: 5px;
-    left: 3px;
-    width: 250px;
-    margin-left: 20px;
-    margin-top: 15%;
-    opacity: 1;
-    transition: all 0.1s;
-    cursor: pointer;
-  }
-  .card:hover .img {
-    background-image: url(https://zupimages.net/up/23/02/xbew.jpg);
-    display: no-repeat;
-  }
-  .img {
-    height: 100%;
-  }
-  .img:hover {
-    height: 100px;
-    width: 500px;
-  }
-  h1 {
-    margin-top: 10%;
-  }
-  .card h2 {
-    padding: 15px 10px;
-    font-size: 30px;
-    transition: all 0.1s;
-    z-index: -99;
-    line-height: 17px;
-    margin-top: 250px;
-    justify-content: space-between;
-    height: 10%;
+  h4 {
+    margin-top: -110%;
+    margin-right: 5px;
   }
 }
 
